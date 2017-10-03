@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TF1 login and anti-adblock bypass
-// @version      0.2
+// @version      0.3
 // @description  TF1 login and anti-adblock bypass
 // @author       Carsso
 // @updateURL    https://openuserjs.org/meta/Carsso/TF1_login_and_anti-adblock_bypass.meta.js
@@ -17,16 +17,15 @@
         if(document.querySelector('#zonePlayer')) {
             for (var i =0; i < 10; i++) {
                 setTimeout(function() {
-                    if(document.querySelector('.container .content .btn_favorite')) {
-                        document.querySelector('.container .content .btn_favorite').remove();
+                    if(document.querySelector('#program_nav nav ul li.follow button')) {
+                        document.querySelector('#program_nav nav ul li.follow button').remove();
                         var btn = document.createElement("a");
-                        btn.setAttribute('style', 'color: #fff; margin-top: 10px; display: inline-block; font-size: 1.4rem; padding: 14px; text-align: center; border-radius: 4px; border: 1px solid #fff;');
-                        btn.setAttribute('onclick', "var iframe = document.createElement('iframe');iframe.setAttribute('src', document.querySelector('#zonePlayer').getAttribute('data-src')+'?useHD=1');iframe.setAttribute('class', 'iframe_player');iframe.setAttribute('style', 'width:100%;height:100%;');document.querySelector('body').replaceWith(iframe);document.querySelector('html').setAttribute('style', 'width:100%;height:100%;");
+                        btn.setAttribute('style', 'color: #fff;');
+                        btn.setAttribute('onclick', "var iframe = document.createElement('iframe');iframe.setAttribute('src', document.querySelector('#zonePlayer').getAttribute('data-src')+'?useHD=1');iframe.setAttribute('class', 'iframe_player');iframe.setAttribute('style', 'width:100%;height:100%;');document.querySelector('body').replaceWith(iframe);document.querySelector('html').setAttribute('style', 'width:100%;height:100%;');");
                         btn.innerHTML = 'LOGIN/ANTI-ADBLOCK BYPASS';
-                        document.querySelector('.container .content').appendChild(btn);
+                        document.querySelector('#program_nav nav ul li.follow').appendChild(btn);
                     }
                     if(document.querySelector('a.large_external_link')) {
-                        document.querySelector('a.large_external_link').remove();
                         document.querySelector('a.large_external_link').remove();
                         var btn2 = document.createElement("div");
                         btn2.setAttribute('class', 'large_external_link');
