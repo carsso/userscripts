@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         TF1 login and anti-adblock bypass
-// @version      0.3
+// @version      0.4
 // @description  TF1 login and anti-adblock bypass
 // @author       Carsso
 // @updateURL    https://openuserjs.org/meta/Carsso/TF1_login_and_anti-adblock_bypass.meta.js
@@ -26,6 +26,7 @@
                         document.querySelector('#program_nav nav ul li.follow').appendChild(btn);
                     }
                     if(document.querySelector('a.large_external_link')) {
+                        document.querySelector('a.large_external_link').remove();
                         document.querySelector('a.large_external_link').remove();
                         var btn2 = document.createElement("div");
                         btn2.setAttribute('class', 'large_external_link');
