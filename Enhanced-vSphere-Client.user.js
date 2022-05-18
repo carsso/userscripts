@@ -1,7 +1,7 @@
 // ==UserScript==
 // @namespace     https://openuserjs.org/users/Carsso
 // @name         Enhanced vSphere Client
-// @version      0.1
+// @version      0.2
 // @description  Enhance your vSphere Client - Supports vCenter 7.0.3
 // @author       Carsso
 // @updateURL    https://openuserjs.org/meta/Carsso/Enhanced_vSphere_Client.meta.js
@@ -38,6 +38,10 @@
                     }
                     vsc-inventory-tree-view .cdk-tree-node {
                         line-height: 1rem !important;
+                    }
+                    vsc-inventory-tree-view .clr-treenode-caret {
+                        flex: 0 0 0.8rem;
+                        width: 0.8rem;
                     }
                 `);
             }
